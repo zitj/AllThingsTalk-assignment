@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +21,13 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+.logo,
+nav ul li,
+nav ul li ul li,
+button {
+  cursor: pointer;
+}
+
 .part1 .header {
   height: 40px;
   background: black;
@@ -30,13 +41,6 @@ h1, h2, h3 {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 2%;
-}
-
-.part1 .header .logo,
-.part1 .header nav ul li,
-.part1 .header nav ul li ul li,
-.part1 .header button {
-  cursor: pointer;
 }
 
 .part1 .header nav {
@@ -387,6 +391,7 @@ h1, h2, h3 {
 
 .part4 {
   background: black;
+  padding-bottom: 5em;
 }
 
 .part4 .container {
@@ -447,5 +452,35 @@ h1, h2, h3 {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.footer {
+  background: black;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .container a {
+  text-decoration: none;
+  color: white;
+  line-height: 40px;
+  font-size: 1.1em;
+  margin-right: 11em;
+}
+
+.footer .container a:hover {
+  color: #89E872;
+}
+
+.footer .container a:active {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

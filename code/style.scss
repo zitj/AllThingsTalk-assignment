@@ -1,6 +1,8 @@
 $new-green: #89E872;
 $new-grey: #AEAEAE;
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -16,6 +18,12 @@ h1, h2, h3, .container .buttonSection button, .guidelinesContainer a, .guideline
 h1, h2 , h3{
     text-transform: uppercase;
 }
+.logo,
+nav ul li,
+nav ul li ul li,
+button{
+    cursor: pointer;
+} 
 .part1{
     .header{
         height: 40px;
@@ -24,12 +32,7 @@ h1, h2 , h3{
         justify-content: space-between;
         align-items: center;
         padding: 30px 2%;
-    .logo,
-    nav ul li,
-    nav ul li ul li,
-    button{
-        cursor: pointer;
-    }    
+     
     nav{
         position: relative;
         margin-left: -20%;
@@ -328,6 +331,7 @@ h1, h2 , h3{
 }
 .part4{
     background: black;
+    padding-bottom: 5em;
     .container{ 
     display: flex;
     justify-content:space-evenly;
@@ -370,6 +374,27 @@ h1, h2 , h3{
     
 }  
 }
-
+.footer{
+    background: black;
+    
+    .container{ 
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+        color: white;
+        line-height: 40px;
+        font-size: 1.1em;
+        margin-right: 11em;
+        &:hover{
+            color: $new-green;
+        }
+        &:active{
+            color:white;
+        }
+    }
+    }
+}
 
 
