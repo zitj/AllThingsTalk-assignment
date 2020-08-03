@@ -4,7 +4,12 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, .container .buttonSection button, .guidelinesContainer a {
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, .container .buttonSection button, .guidelinesContainer a, .guidelinesContainer p {
   font-family: 'Paytone One', sans-serif;
 }
 
@@ -134,11 +139,6 @@ h1, h2, h3 {
   background: url(../img/hero1.png);
 }
 
-.part1 .hero .container {
-  width: 70%;
-  margin: 0 auto;
-}
-
 .part1 .hero .container h1 {
   font-size: 3.3em;
   letter-spacing: 2px;
@@ -180,16 +180,14 @@ h1, h2, h3 {
 .part1 .hero .container .buttonSection {
   position: absolute;
   bottom: -10.5%;
-  left: 50%;
   background: black;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
 }
 
 .part1 .hero .container .buttonSection .border {
@@ -207,7 +205,7 @@ h1, h2, h3 {
   font-size: 1.4em;
   background: black;
   color: white;
-  width: 400px;
+  width: 33%;
   height: 100px;
   cursor: pointer;
   border: none;
@@ -216,5 +214,123 @@ h1, h2, h3 {
 .part1 .hero .container .buttonSection button.active {
   background: white;
   color: black;
+}
+
+.part2 .container p {
+  text-align: center;
+  margin-top: 2.5em;
+  font-size: 1.2em;
+}
+
+.part2 .container .guidelinesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 16%;
+  width: 70%;
+}
+
+.part2 .container .guidelinesContainer .number {
+  padding: 40px 40px;
+}
+
+.part2 .container .guidelinesContainer .number p {
+  display: none;
+}
+
+.part2 .container .guidelinesContainer .border {
+  width: 1px;
+  height: 40px;
+  background: #AEAEAE;
+  margin-top: 70px;
+}
+
+.part2 .container .guidelinesContainer .border:nth-of-type(15), .part2 .container .guidelinesContainer .border:nth-of-type(1) {
+  display: none;
+}
+
+.part2 .container .guidelinesContainer a {
+  text-decoration: none;
+  color: #AEAEAE;
+  font-size: 4em;
+}
+
+.part2 .container .guidelinesContainer .number.active {
+  padding-top: 0px;
+}
+
+.part2 .container .guidelinesContainer .number.active p {
+  display: block;
+  color: white;
+  background: black;
+  padding: 0px 5px 2px;
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.part2 .container .guidelinesContainer .number.active a {
+  margin-left: 25px;
+  color: black;
+  font-size: 7em;
+}
+
+.part2 .container h2 {
+  text-align: center;
+}
+
+.part2 .container h2:nth-of-type(2) {
+  display: none;
+}
+
+.part2 .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.part2 .container .content:nth-of-type(3) {
+  display: none;
+}
+
+.part2 .container .content .text {
+  margin-top: 120px;
+}
+
+.part2 .container .content .text ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+
+.part2 .container .content .text ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+  margin-left: 60px;
+}
+
+.part2 .container .content .text ol li::before {
+  content: counter(my-awesome-counter) ". ";
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 32px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: 28px;
+  width: var(--size);
+  height: var(--size);
+  top: 8%;
+  left: -12%;
+  background: #89E872;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.part2 .container .picture svg {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 /*# sourceMappingURL=style.css.map */
