@@ -1,0 +1,105 @@
+$new-green: #89E872;
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, .container .buttonSection button, .guidelinesContainer a{
+    font-family: 'Paytone One', sans-serif;
+}
+h1, h2 , h3{
+    text-transform: uppercase;
+}
+.part1{
+    .header{
+        height: 40px;
+        background: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 2%;
+    .logo,
+    nav ul li,
+    nav ul li ul li,
+    button{
+        cursor: pointer;
+    }    
+    nav{
+        position: relative;
+        margin-left: -20%;
+        text-decoration: none;
+        color: white;
+        ul{ 
+        list-style: none;
+        li{
+        display: inline-block;
+        
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 80px 20px;
+            transition: 0.2s ease;
+            &:hover{
+                color: $new-green;
+            }
+        }
+            span{
+                display: inline-block;
+                transform: rotate(90deg);
+                margin-left: 4px;
+            }
+            ul{
+                display: none;
+                padding: 5px;
+                background: black;
+                position: absolute;
+                top:100%;
+                transition: 0.3s ease-in-out;
+               li{
+                 list-style: none;
+                 padding: 20px;
+                 &:hover{
+                     color: $new-green;
+                     transition: 0.2s ease;
+                 }
+               }
+            }
+            &:hover > ul{
+                display: flex;
+                opacity: .98;
+                flex-direction: column-reverse;
+            }
+        }
+        }
+    }
+    .buttonSection{
+        button{
+            padding: 5px 10px;
+            background: none;
+            border: 1px solid white;
+            transition: .17s ease-in-out;
+            &:hover{
+                background: $new-green;
+                border: 1px solid $new-green;
+                color: black;
+            }
+            &:active{
+                color: black;
+                background: white;
+                border: 1px solid white;
+            }
+        }
+        .contact{
+            color: white;
+      
+        }
+        .signUp{
+            background: white;
+        }
+    }
+}
+}
+
+

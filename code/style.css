@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, .container .buttonSection button, .guidelinesContainer a {
+  font-family: 'Paytone One', sans-serif;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+.part1 .header {
+  height: 40px;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 2%;
+}
+
+.part1 .header .logo,
+.part1 .header nav ul li,
+.part1 .header nav ul li ul li,
+.part1 .header button {
+  cursor: pointer;
+}
+
+.part1 .header nav {
+  position: relative;
+  margin-left: -20%;
+  text-decoration: none;
+  color: white;
+}
+
+.part1 .header nav ul {
+  list-style: none;
+}
+
+.part1 .header nav ul li {
+  display: inline-block;
+}
+
+.part1 .header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 80px 20px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.part1 .header nav ul li a:hover {
+  color: #89E872;
+}
+
+.part1 .header nav ul li span {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-left: 4px;
+}
+
+.part1 .header nav ul li ul {
+  display: none;
+  padding: 5px;
+  background: black;
+  position: absolute;
+  top: 100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.part1 .header nav ul li ul li {
+  list-style: none;
+  padding: 20px;
+}
+
+.part1 .header nav ul li ul li:hover {
+  color: #89E872;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.part1 .header nav ul li:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: .98;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.part1 .header .buttonSection button {
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid white;
+  -webkit-transition: .17s ease-in-out;
+  transition: .17s ease-in-out;
+}
+
+.part1 .header .buttonSection button:hover {
+  background: #89E872;
+  border: 1px solid #89E872;
+  color: black;
+}
+
+.part1 .header .buttonSection button:active {
+  color: black;
+  background: white;
+  border: 1px solid white;
+}
+
+.part1 .header .buttonSection .contact {
+  color: white;
+}
+
+.part1 .header .buttonSection .signUp {
+  background: white;
+}
+/*# sourceMappingURL=style.css.map */
