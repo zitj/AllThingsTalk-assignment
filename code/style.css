@@ -384,4 +384,68 @@ h1, h2, h3 {
   margin-top: 16px;
   background: #6b6b6b;
 }
+
+.part4 {
+  background: black;
+}
+
+.part4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.part4 .container .column {
+  width: 30%;
+  margin-right: 5%;
+}
+
+.part4 .container .column h3 {
+  color: #89E872;
+  letter-spacing: 1px;
+}
+
+.part4 .container .column a {
+  text-decoration: none;
+  padding: 10px 0;
+  color: white;
+  display: block;
+}
+
+.part4 .container .column a:hover {
+  color: #89E872;
+}
+
+.part4 .container .column p {
+  color: white;
+}
+
+.part4 .container .column p:nth-child(4) {
+  text-transform: uppercase;
+}
+
+.part4 .container .column svg {
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+  cursor: pointer;
+}
+
+.part4 .container .column svg:hover {
+  opacity: .7;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.part4 .container .column svg:active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
 /*# sourceMappingURL=style.css.map */
