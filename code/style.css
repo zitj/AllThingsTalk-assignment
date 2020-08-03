@@ -127,4 +127,94 @@ h1, h2, h3 {
 .part1 .header .buttonSection .signUp {
   background: white;
 }
+
+.part1 .hero {
+  text-align: center;
+  height: 100vh;
+  background: url(../img/hero1.png);
+}
+
+.part1 .hero .container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.part1 .hero .container h1 {
+  font-size: 3.3em;
+  letter-spacing: 2px;
+  margin-top: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.part1 .hero .container h1 span {
+  background: black;
+  padding: 0px 15px;
+  color: white;
+}
+
+.part1 .hero .container h3 {
+  font-size: 1.4em;
+  background: #89E872;
+  padding: 2px 10px;
+  margin: 5px 0;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.part1 .hero .container h3:nth-of-type(2) {
+  top: 70%;
+  padding: 2px 17px;
+}
+
+.part1 .hero .container h3:nth-of-type(3) {
+  top: 74%;
+}
+
+.part1 .hero .container .buttonSection {
+  position: absolute;
+  bottom: -10.5%;
+  left: 50%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.part1 .hero .container .buttonSection .border {
+  height: 60px;
+  width: 2px;
+  background: white;
+  margin-top: 20px;
+}
+
+.part1 .hero .container .buttonSection .border:nth-of-type(1) {
+  display: none;
+}
+
+.part1 .hero .container .buttonSection button {
+  font-size: 1.4em;
+  background: black;
+  color: white;
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.part1 .hero .container .buttonSection button.active {
+  background: white;
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */

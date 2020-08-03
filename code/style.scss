@@ -100,6 +100,80 @@ h1, h2 , h3{
         }
     }
 }
+
+.hero{
+    text-align: center;
+    height: 100vh;
+    background: url(../img/hero1.png);
+    .container{
+        width: 70%;
+        margin: 0 auto;
+        
+        h1{
+            font-size: 3.3em;
+            letter-spacing: 2px;
+            margin-top: 0%;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            span{
+                background: black;
+                padding: 0px 15px;
+                color:white;
+            }
+        }
+        h3{
+            font-size: 1.4em;
+            background: $new-green;
+            padding: 2px 10px;
+            margin: 5px 0;
+            position: absolute;
+            top:66%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            &:nth-of-type(2){
+                top:70%;
+                padding: 2px 17px;
+            }
+            &:nth-of-type(3){
+                top:74%;
+            }
+   
+    }
+   .buttonSection{
+       position: absolute;
+       bottom: -10.5%;
+       left: 50%;
+       background: black;
+       display: flex;
+       justify-content: space-between;
+       transform: translate(-50%);
+       .border{
+           height: 60px;
+           width: 2px;
+           background: white;
+           margin-top: 20px;
+        &:nth-of-type(1){
+            display: none;
+        }
+        }
+       button{
+           font-size: 1.4em;
+           background: black;
+           color: white;
+           width: 400px;
+           height: 100px;
+           cursor: pointer;
+           border: none;
+          
+       }
+       button.active{
+           background: white;
+           color: black;
+       }
+   }
 }
+}}
 
 
