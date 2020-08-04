@@ -28,74 +28,7 @@ button,
 .blackBackground{
     cursor: pointer;
 }
-.blackBackground{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    background: black;
-    opacity: .97;
-    animation: blackBackgroundIntro .3s ease-in-out;
-    @keyframes blackBackgroundIntro{
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: .97;
-        }
-    }
-    
-    .video img{
-        width: 50%;
-        height: 550px;
-        position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        box-shadow: 2px 2px 80px 10px rgba(255, 255, 255, 0.13);
-        display: none;
-        animation: videoIntro .3s ease-in-out;
-        z-index: 2;
-        @keyframes videoIntro {
-            0%{
-                margin-top: 2.4em;
-                opacity: 0;
-            }
-            100%{
-                margin-top: 0;
-                opacity: 1;
-            }
-        }
-    }
-    .video.active img{
-        display: block;
-    }
-    .closeButton{
-        position: absolute;
-        right: 25%;
-        top:18%;
-        display: none;
-        animation: closeButtonIntro .3s ease-in-out;
-        z-index: 2;
-        @keyframes closeButtonIntro {
-            0%{
-                margin-top: 1.2em;
-                opacity: 0;
-            }
-            100%{
-                margin-top: 0;
-                opacity: 1;
-            }
-        }
-    }
-    .closeButton.active{
-        display: block;
-    }
-}
-.blackBackground.active{
-    display: block;
-} 
+
 .part1{
     .header{
         height: 40px;
@@ -114,6 +47,8 @@ button,
         list-style: none;
         li{
         display: inline-block;
+        position: relative;
+        padding: 30px 10px;    
         
         a{
             text-decoration: none;
@@ -132,13 +67,13 @@ button,
             ul{
                 display: none;
                 padding: 5px;
-                background: black;
                 position: absolute;
                 top:100%;
                 transition: 0.3s ease-in-out;
                li{
                  list-style: none;
                  padding: 20px;
+                 background: black;
                  &:hover{
                      color: $new-green;
                      transition: 0.2s ease;
@@ -148,10 +83,40 @@ button,
             &:hover > ul{
                 display: flex;
                 opacity: .98;
-                flex-direction: column-reverse;
+                flex-direction: column;
+                perspective: 1000px;
             }
+            &:hover > ul > li{
+                animation: dropMenu;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode:forwards;
+                
+                box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.445);
+            }
+            &:hover > ul > li:nth-child(1){
+                animation-duration: 300ms;
+                }
+            
+            &:hover > ul > li:nth-child(2){
+                animation-duration: 600ms;
+                }
+            
+            &:hover > ul > li:nth-child(3){
+                animation-duration: 900ms;
+                border-radius: 0px 0px 6px 6px;
+                }
+            
+            @keyframes dropMenu {
+                0%{
+                    opacity: 0;
+                    transform: rotateY(-90deg) translateY(30px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: rotateY(0deg) translateY(0px);
+                }
         }
-        }
+        }}
     }
     .buttonSection{
         button{
@@ -519,4 +484,73 @@ button,
     }
 }
 
+// VIDEO CLIP SECTION
+
+.blackBackground{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: .97;
+    animation: blackBackgroundIntro .3s ease-in-out;
+    @keyframes blackBackgroundIntro{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: .97;
+        }
+    }
+    .video img{
+        width: 50%;
+        height: 550px;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 2px 2px 80px 10px rgba(255, 255, 255, 0.13);
+        display: none;
+        animation: videoIntro .3s ease-in-out;
+        z-index: 2;
+        @keyframes videoIntro {
+            0%{
+                margin-top: 2.4em;
+                opacity: 0;
+            }
+            100%{
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .video.active img{
+        display: block;
+    }
+    .closeButton{
+        position: absolute;
+        right: 25%;
+        top:18%;
+        display: none;
+        animation: closeButtonIntro .3s ease-in-out;
+        z-index: 2;
+        @keyframes closeButtonIntro {
+            0%{
+                margin-top: 1.2em;
+                opacity: 0;
+            }
+            100%{
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .closeButton.active{
+        display: block;
+    }
+}
+.blackBackground.active{
+    display: block;
+} 
 
