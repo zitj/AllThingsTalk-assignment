@@ -24,7 +24,10 @@ h1, h2, h3 {
 .logo,
 nav ul li,
 nav ul li ul li,
-button {
+button,
+.number,
+.playButton,
+.playButtonArrow {
   cursor: pointer;
 }
 
@@ -199,10 +202,11 @@ button {
   width: 2px;
   background: white;
   margin-top: 20px;
+  display: none;
 }
 
-.part1 .hero .container .buttonSection .border:nth-of-type(1) {
-  display: none;
+.part1 .hero .container .buttonSection .border.active {
+  display: block;
 }
 
 .part1 .hero .container .buttonSection button {
@@ -213,6 +217,18 @@ button {
   height: 100px;
   cursor: pointer;
   border: none;
+  outline: none;
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+.part1 .hero .container .buttonSection button:hover {
+  font-size: 1.48em;
+}
+
+.part1 .hero .container .buttonSection button:active {
+  background: white;
+  color: black;
 }
 
 .part1 .hero .container .buttonSection button.active {
@@ -240,6 +256,10 @@ button {
   padding: 40px 40px;
 }
 
+.part2 .container .guidelinesContainer .number:hover a {
+  font-size: 4.4em;
+}
+
 .part2 .container .guidelinesContainer .number p {
   display: none;
 }
@@ -259,6 +279,8 @@ button {
   text-decoration: none;
   color: #AEAEAE;
   font-size: 4em;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 
 .part2 .container .guidelinesContainer .number.active {
@@ -282,20 +304,78 @@ button {
 
 .part2 .container h2 {
   text-align: center;
+  display: none;
 }
 
-.part2 .container h2:nth-of-type(2) {
-  display: none;
+.part2 .container h2.active {
+  display: block;
 }
 
 .part2 .container .content {
+  display: none;
+  margin-bottom: 10em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.part2 .container .content.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: intro .3s ease-in-out;
+          animation: intro .3s ease-in-out;
 }
 
-.part2 .container .content:nth-of-type(3) {
-  display: none;
+@-webkit-keyframes intro {
+  0% {
+    margin-top: 3em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0em;
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  0% {
+    margin-top: 3em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0em;
+    opacity: 1;
+  }
+}
+
+.part2 .container .playButton {
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+.part2 .container .playButton:hover {
+  opacity: .85;
+}
+
+.part2 .container .playButton:active {
+  opacity: 1;
+}
+
+.part2 .container .playButtonArrow {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+.part2 .container .playButtonArrow:hover {
+  -webkit-transform: scaleY(0.99);
+          transform: scaleY(0.99);
+}
+
+.part2 .container .playButtonArrow:active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .part2 .container .content .text {

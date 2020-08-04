@@ -21,7 +21,10 @@ h1, h2 , h3{
 .logo,
 nav ul li,
 nav ul li ul li,
-button{
+button,
+.number,
+.playButton,
+.playButtonArrow{
     cursor: pointer;
 } 
 .part1{
@@ -159,9 +162,10 @@ button{
            width: 2px;
            background: white;
            margin-top: 20px;
-        &:nth-of-type(1){
-            display:none;
+           display: none;
         }
+        .border.active{
+            display: block;
         }
        button{
            font-size: 1.4em;
@@ -171,6 +175,15 @@ button{
            height: 100px;
            cursor: pointer;
            border: none;
+           outline: none;
+           transition: .15s ease-in-out;
+           &:hover{
+               font-size: 1.48em;
+           }
+           &:active{
+               background: white;
+               color: black;
+           }
           
        }
        button.active{
@@ -195,6 +208,10 @@ button{
         
         .number{
             padding: 40px 40px;
+           
+        }
+        .number:hover a{
+            font-size: 4.4em;
         }
         .number p{
             display: none;
@@ -214,6 +231,9 @@ button{
             text-decoration: none;
             color:$new-grey;
             font-size: 4em;
+            transition: .1s ease-in-out;
+           
+           
         }
         .number.active{
             padding-top: 0px;
@@ -234,14 +254,47 @@ button{
     }
     h2{
         text-align: center;
-        &:nth-of-type(2){
-            display: none;
-        }
+        display: none;
+    }
+    h2.active{
+        display: block;
     }
     .content{
+        display: none;
+        margin-bottom: 10em;
+        transition: .2s ease-in-out;
+        }
+    .content.active{
         display: flex;
-        &:nth-of-type(3){
-            display: none;
+        animation: intro .3s ease-in-out;
+        @keyframes intro {
+            0%{
+                margin-top: 3em;
+                opacity: 0;
+            }
+            100%{
+                margin-top: 0em;
+                opacity: 1;
+            }
+        }
+    }    
+    .playButton{
+        transition: .15s ease-in-out;
+        &:hover{
+            opacity: .85;
+        }
+        &:active{
+            opacity: 1;
+        }
+    }
+    .playButtonArrow{
+        transform: scale(1);
+        transition: .15s ease-in-out;
+        &:hover{
+            transform: scaleY(.99);
+        }
+        &:active{
+            transform: scaleY(1);
         }
     }
     .content .text{

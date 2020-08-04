@@ -6,6 +6,7 @@
     <title>AllThingsTalk assignment - Aleksandar Veljković</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -56,8 +57,8 @@
                     <div class="buttonSection">
                         <button class="active">Get started</button>
                         <div class="border"></div>
-                        <button>Build your own <br>application</button>
-                        <div class="border"></div>
+                        <button id="preventingDefault">Build your own <br>application</button>
+                        <div class="border  active"></div>
                         <button>Usefull links</button>
                     </div><!-- end buttonSection -->
                 </div><!-- end .container -->
@@ -66,25 +67,25 @@
         <div class="part2">
             <div class="container">
             <p>Follow our guidelines to help you set up and work with solution<br>acceleration in the shortest time</p>
-            <div class="guidelinesContainer">
+            <div class="guidelinesContainer" id="guidelinesContainer">
                 <div class="border"></div>
-                <div class="number active"><a href="#">1</a><p>activate</p></div>
+                <div class="number active"><a href="#preventingDefault">1</a><p>activate</p></div>
                 <div class="border"></div>
-                <div class="number "><a href="#">2</a><p>unboxing</p></div>
+                <div class="number "><a href="#preventingDefault">2</a><p>unboxing</p></div>
                 <div class="border"></div>
-                <div class="number "><a href="#">3</a><p>example3</p></div>
+                <div class="number "><a href="#preventingDefault">3</a><p>example3</p></div>
                 <div class="border"></div>
-                <div class="number"><a href="#">4</a><p>example4</p></div>
+                <div class="number"><a href="#preventingDefault">4</a><p>example4</p></div>
                 <div class="border"></div>
-                <div class="number"><a href="#">5</a><p>example5</p></div>
+                <div class="number"><a href="#preventingDefault">5</a><p>example5</p></div>
                 <div class="border"></div>
-                <div class="number"><a href="#">6</a><p>example6</p></div>
+                <div class="number"><a href="#preventingDefault">6</a><p>example6</p></div>
                 <div class="border"></div>
-                <div class="number"><a href="#">7</a><p>example7</p></div>
+                <div class="number"><a href="#preventingDefault">7</a><p>example7</p></div>
                 <div class="border"></div>
             </div><!-- guidelinesContainer-->
-            <h2>Activate the also account</h2>
-            <div class="content">
+            <h2 class="active">Activate the also account</h2>
+            <div class="content active">
                 <div class="picture">
                     <svg width="679" height="449" viewBox="0 0 679 449" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M441.099 85.3861H14.8057V390.688H441.099V85.3861Z" fill="#89E872"/>
@@ -111,8 +112,8 @@
                     <path d="M2.8125 146.202H426.875" stroke="#E9EAEC" stroke-miterlimit="10"/>
                     <path d="M253.959 321.048H16.8975V354.169H253.959V321.048Z" fill="#89E872"/>
                     <path d="M253.262 360.823L246.429 364.488V341.003L266.23 354.714L259.119 357.836L261.907 364.352L257.166 366.932L253.262 360.823Z" fill="black"/>
-                    <path d="M480.98 447.706C530.066 447.706 569.948 409.016 569.948 361.096C569.948 313.175 530.205 274.486 480.98 274.486C431.754 274.486 392.012 313.175 392.012 361.096C392.012 409.016 431.894 447.706 480.98 447.706Z" fill="#775DF3" stroke="black" stroke-miterlimit="10"/>
-                    <path d="M462.573 330.415V391.772L510.125 358.378L462.573 330.415Z" fill="white"/>
+                    <path class="playButton" d="M480.98 447.706C530.066 447.706 569.948 409.016 569.948 361.096C569.948 313.175 530.205 274.486 480.98 274.486C431.754 274.486 392.012 313.175 392.012 361.096C392.012 409.016 431.894 447.706 480.98 447.706Z" fill="#775DF3" stroke="black" stroke-miterlimit="10"/>
+                    <path class="playButtonArrow"d="M462.573 330.415V391.772L510.125 358.378L462.573 330.415Z" fill="white"/>
                     <path d="M77.2777 26.3354H332.747C333.026 26.3354 333.165 26.4712 333.165 26.7427V295.527C333.165 295.798 333.026 295.934 332.747 295.934H77.2777C76.9988 295.934 76.8594 295.798 76.8594 295.527V26.7427C76.8594 26.607 76.9988 26.3354 77.2777 26.3354Z" fill="black"/>
                     <path d="M67.6557 0H342.369C342.648 0 342.787 0.13575 342.787 0.407249V288.875C342.787 289.147 342.648 289.282 342.369 289.282H67.6557C67.3768 289.282 67.2373 289.147 67.2373 288.875V0.407249C67.2373 0.271499 67.3768 0 67.6557 0Z" fill="white"/>
                     <path d="M341.95 289.417H68.0738C67.516 289.417 67.0977 289.01 67.0977 288.467V0.950245C67.0977 0.407248 67.516 0 68.0738 0H341.95C342.508 0 342.926 0.407248 342.926 0.950245V288.603C342.926 289.01 342.508 289.417 341.95 289.417ZM68.6316 288.06H341.532V1.35749H68.6316V288.06Z" fill="black"/>
@@ -204,8 +205,6 @@
                         <li>Click on Complete your account link to activate the new Ground on the<br>ALSO IoT Platform</li>
                         <li>Click on Complete your account link to activate the new Ground on the<br>ALSO IoT Platform</li>
                     </ol>
-                    
-                    
                 </div><!-- end text -->
             </div><!-- end .content-->
 
@@ -248,8 +247,8 @@
                     <path d="M333.365 342.384L331.26 333.38L328.687 341.691L325.529 341.229L322.488 327.955L325.529 328.417L327.4 337.305L330.09 329.109L332.663 329.456L334.885 338.344L337.224 330.148L340.265 330.61L336.522 342.845L333.365 342.384Z" fill="black"/>
                     <path d="M348.101 344.692V343.306C347.282 344.23 345.996 344.692 344.476 344.461C342.721 344.23 340.616 342.499 340.733 339.613C340.85 336.612 342.955 335.804 344.709 336.15C346.23 336.381 347.516 337.189 348.218 338.228V336.612C348.218 335.342 347.282 334.303 345.879 334.073C344.709 333.842 343.54 334.188 342.604 335.111L341.552 332.572C342.955 331.418 344.709 331.072 346.464 331.302C349.037 331.649 351.376 333.265 351.259 336.843L351.025 345.038L348.101 344.692ZM348.218 341.575V339.959C347.75 339.151 346.815 338.574 345.879 338.459C344.709 338.228 343.774 338.805 343.774 340.075C343.774 341.344 344.709 342.152 345.879 342.268C346.698 342.499 347.633 342.268 348.218 341.575Z" fill="black"/>
                     <path d="M353.949 347.577C354.183 347.693 354.534 347.924 354.885 347.924C355.703 348.039 356.171 347.924 356.522 347.231L356.99 346.192L352.896 332.571L356.054 333.033L358.744 342.383L361.902 333.957L365.059 334.418L359.329 348.385C358.393 350.694 356.873 351.04 355.002 350.81C354.651 350.81 353.949 350.579 353.598 350.348L353.949 347.577Z" fill="black"/>
-                    <path d="M478.267 325.069C519.433 325.069 552.881 292.172 552.881 251.425C552.881 210.679 519.55 177.781 478.267 177.781C436.983 177.781 403.77 210.794 403.77 251.425C403.77 292.056 437.1 325.069 478.267 325.069Z" fill="#89E872" stroke="black" stroke-miterlimit="10"/>
-                    <path d="M462.947 225.338V277.512L502.827 249.116L462.947 225.338Z" fill="white"/>
+                    <path class="playButton" d="M478.267 325.069C519.433 325.069 552.881 292.172 552.881 251.425C552.881 210.679 519.55 177.781 478.267 177.781C436.983 177.781 403.77 210.794 403.77 251.425C403.77 292.056 437.1 325.069 478.267 325.069Z" fill="#89E872" stroke="black" stroke-miterlimit="10"/>
+                    <path class="playButtonArrow" d="M462.947 225.338V277.512L502.827 249.116L462.947 225.338Z" fill="white"/>
                     <path d="M360.146 84.3997H588.433V152.85H491.482L480.371 169.587L469.846 152.85H360.146V84.3997Z" fill="black"/>
                     <path d="M566.446 40.6516V63.9682" stroke="black" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round"/>
                     <path d="M584.69 63.9679L588.316 50.4629" stroke="black" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -312,6 +311,7 @@
                     </ol>
                 </div><!-- end text -->
             </div><!-- end .content-->
+            
         </div><!-- end .part2-->
     </div> <!-- end .container -->
     <div class="part3">
