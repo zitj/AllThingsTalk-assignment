@@ -24,8 +24,77 @@ nav ul li ul li,
 button,
 .number,
 .playButton,
-.playButtonArrow{
+.playButtonArrow,
+.blackBackground{
     cursor: pointer;
+}
+.blackBackground{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: .97;
+    animation: blackBackgroundIntro .3s ease-in-out;
+    @keyframes blackBackgroundIntro{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: .97;
+        }
+    }
+    
+    .video img{
+        width: 50%;
+        height: 550px;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 2px 2px 80px 10px rgba(255, 255, 255, 0.13);
+        display: none;
+        animation: videoIntro .3s ease-in-out;
+        z-index: 2;
+        @keyframes videoIntro {
+            0%{
+                margin-top: 2.4em;
+                opacity: 0;
+            }
+            100%{
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .video.active img{
+        display: block;
+    }
+    .closeButton{
+        position: absolute;
+        right: 25%;
+        top:18%;
+        display: none;
+        animation: closeButtonIntro .3s ease-in-out;
+        z-index: 2;
+        @keyframes closeButtonIntro {
+            0%{
+                margin-top: 1.2em;
+                opacity: 0;
+            }
+            100%{
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .closeButton.active{
+        display: block;
+    }
+}
+.blackBackground.active{
+    display: block;
 } 
 .part1{
     .header{

@@ -4,10 +4,16 @@ const numberButton = document.querySelectorAll('.number');
 const content = document.querySelectorAll('.content');
 const part2 = document.querySelector('.part2');
 const headline = part2.querySelectorAll('h2');
+
 const hero = document.querySelector('.hero');
 const heroButton = hero.querySelectorAll('button');
 const heroButtonBorder = hero.querySelectorAll('.border');
 
+const playButton = document.querySelectorAll('.playButton');
+const playButtonArrow = document.querySelectorAll('.playButtonArrow');
+const blackBackground = document.querySelector('.blackBackground');
+const videoClip = document.querySelector('.video');
+const closeButton = document.querySelector('.closeButton');
 
 const numberButtonClassRemoval = () => {
     for(let i = 0; i < numberButton.length; i++){
@@ -77,3 +83,26 @@ for(let i = 0; i < heroButton.length; i++){
         }
     });
 };
+
+for(let i = 0; i < playButton.length; i++){
+    playButton[i].addEventListener('click', ()=>{
+        blackBackground.classList.add('active');
+    });
+    playButtonArrow[i].addEventListener('click', ()=>{
+        blackBackground.classList.add('active');
+    });
+}
+
+
+blackBackground.addEventListener('animationend', ()=>{
+    videoClip.classList.add('active');
+    closeButton.classList.add('active');
+});
+
+blackBackground.addEventListener('click', ()=>{
+    blackBackground.classList.remove('active');
+});
+
+closeButton.addEventListener('click', ()=>{
+    blackBackground.classList.remove('active');
+});

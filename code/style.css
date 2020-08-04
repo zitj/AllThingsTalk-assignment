@@ -27,8 +27,121 @@ nav ul li ul li,
 button,
 .number,
 .playButton,
-.playButtonArrow {
+.playButtonArrow,
+.blackBackground {
   cursor: pointer;
+}
+
+.blackBackground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: .97;
+  -webkit-animation: blackBackgroundIntro .3s ease-in-out;
+          animation: blackBackgroundIntro .3s ease-in-out;
+}
+
+@-webkit-keyframes blackBackgroundIntro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .97;
+  }
+}
+
+@keyframes blackBackgroundIntro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .97;
+  }
+}
+
+.blackBackground .video img {
+  width: 50%;
+  height: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 2px 2px 80px 10px rgba(255, 255, 255, 0.13);
+          box-shadow: 2px 2px 80px 10px rgba(255, 255, 255, 0.13);
+  display: none;
+  -webkit-animation: videoIntro .3s ease-in-out;
+          animation: videoIntro .3s ease-in-out;
+  z-index: 2;
+}
+
+@-webkit-keyframes videoIntro {
+  0% {
+    margin-top: 2.4em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes videoIntro {
+  0% {
+    margin-top: 2.4em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.blackBackground .video.active img {
+  display: block;
+}
+
+.blackBackground .closeButton {
+  position: absolute;
+  right: 25%;
+  top: 18%;
+  display: none;
+  -webkit-animation: closeButtonIntro .3s ease-in-out;
+          animation: closeButtonIntro .3s ease-in-out;
+  z-index: 2;
+}
+
+@-webkit-keyframes closeButtonIntro {
+  0% {
+    margin-top: 1.2em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes closeButtonIntro {
+  0% {
+    margin-top: 1.2em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.blackBackground .closeButton.active {
+  display: block;
+}
+
+.blackBackground.active {
+  display: block;
 }
 
 .part1 .header {
