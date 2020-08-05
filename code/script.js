@@ -15,6 +15,11 @@ const blackBackground = document.querySelector('.blackBackground');
 const videoClip = document.querySelector('.video');
 const closeButton = document.querySelector('.closeButton');
 
+const hamburger = document.querySelector('.hamburger');
+const spans = hamburger.querySelectorAll('span');
+
+console.log(spans);
+
 const numberButtonClassRemoval = () => {
     for(let i = 0; i < numberButton.length; i++){
         numberButton[i].classList.remove('active');
@@ -105,4 +110,10 @@ blackBackground.addEventListener('click', ()=>{
 
 closeButton.addEventListener('click', ()=>{
     blackBackground.classList.remove('active');
+});
+
+hamburger.addEventListener('click', ()=>{
+    for(i = 0; i < spans.length; i++){
+        spans[i].classList.toggle('active');
+    }
 });
