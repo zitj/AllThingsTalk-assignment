@@ -26,6 +26,9 @@ h1, h2, h3, .container .buttonSection button, .guidelinesContainer a, .guideline
 h1, h2 , h3{
     text-transform: uppercase;
 }
+a{
+    outline:none;
+}
 .logo,
 nav ul li,
 nav ul li ul li,
@@ -64,12 +67,11 @@ button,
         span.active{
             transform:translateY(10px) rotate(-45deg)
         }
-       
         @include media("<=1010px"){
         display: block;
         position: absolute;
         right:10%;
-        top:35%;  
+        top:30%;  
     }
 }
 
@@ -87,7 +89,11 @@ button,
         position: relative;
         margin-right: 5%;
         text-decoration: none;
+        transition: .3s ease-in-out;
         color: white;
+        &.active {
+            margin-right: 2%;
+          }
         @include media("<=1370px"){
             margin-right: 10%;
           }
@@ -107,7 +113,7 @@ button,
             margin-right: 4%;
           }
           @include media("<=1010px"){
-            // display: none;
+            margin-right: -100%;
             background: black;
             width: 200px;
             height: 550px;
@@ -115,8 +121,11 @@ button,
             top:100%;
             right: 0%;
         }
+       
+        
         ul{ 
         list-style: none;
+        
         li{
         display: inline-block;
         position: relative;
@@ -164,12 +173,24 @@ button,
                 background: $new-green;
                 border: 1px solid $new-green;
                 color: black;
-               
+                    @include media("<=1010px"){
+                            background:none;
+                            color: $new-green;
+                            border: none;
+                            padding:5px;
+                              } 
             }
             &:active{
                 color: black;
                 background: white;
                 border: 1px solid white;
+                
+                @include media("<=1010px"){
+                    background:none;
+                    color: $new-green;
+                    border: none;
+                    padding:5px;
+                      } 
             }
         }
         &:nth-child(10){
@@ -284,7 +305,6 @@ button,
                  padding: 20px 20px;
                  background: black;
                  @include media("<=1010px"){
-                    // border-bottom:1px solid $new-green;
                     padding:0px;
                 }
                  &:hover{
@@ -297,7 +317,8 @@ button,
                  }
                }
             }
-            &:hover > ul{
+            &:hover > ul,
+            .insideList.active{
                 display: flex;
                 opacity: .98;
                 flex-direction: column;
@@ -307,7 +328,8 @@ button,
                     display: block;
                 }
             }
-            &:hover > ul > li{
+            &:hover > ul > li,
+            .insideList.active > li{
                 animation: dropMenu;
                 animation-timing-function: ease-in-out;
                 animation-fill-mode:forwards;
@@ -351,7 +373,9 @@ button,
         }
         
         }
+        
     }
+   
     }
 }
 

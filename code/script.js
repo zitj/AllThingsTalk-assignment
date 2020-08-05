@@ -2,6 +2,7 @@
 
 const numberButton = document.querySelectorAll('.number');
 const content = document.querySelectorAll('.content');
+const part1 = document.querySelector('.part1');
 const part2 = document.querySelector('.part2');
 const headline = part2.querySelectorAll('h2');
 
@@ -18,7 +19,10 @@ const closeButton = document.querySelector('.closeButton');
 const hamburger = document.querySelector('.hamburger');
 const spans = hamburger.querySelectorAll('span');
 
-console.log(spans);
+const nav = part1.querySelector('nav');
+const insideLists = document.querySelectorAll('.insideList');
+const listElements = document.querySelectorAll('.listElement');
+
 
 const numberButtonClassRemoval = () => {
     for(let i = 0; i < numberButton.length; i++){
@@ -37,6 +41,11 @@ const headlineClassRemoval = () => {
         headline[i].classList.remove('active');
     };
 }
+// const insideListsClassRemoval = () =>{
+//     for(let i = 0; i < insideLists.length; i++){
+//         insideLists[i].classList.remove('active');
+//     };
+// }
 const classRemoval = () =>{
     contentClassRemoval();
     headlineClassRemoval();
@@ -98,6 +107,12 @@ for(let i = 0; i < playButton.length; i++){
     });
 }
 
+for(let i = 0; i < listElements.length; i++){
+    listElements[i].addEventListener('click', ()=>{
+        // insideListsClassRemoval();
+        insideLists[i].classList.toggle('active');
+    });
+}
 
 blackBackground.addEventListener('animationend', ()=>{
     videoClip.classList.add('active');
@@ -116,4 +131,6 @@ hamburger.addEventListener('click', ()=>{
     for(i = 0; i < spans.length; i++){
         spans[i].classList.toggle('active');
     }
+    nav.classList.toggle('active');
 });
+

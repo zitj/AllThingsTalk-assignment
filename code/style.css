@@ -26,6 +26,10 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+a {
+  outline: none;
+}
+
 .logo,
 nav ul li,
 nav ul li ul li,
@@ -80,7 +84,7 @@ button,
     display: block;
     position: absolute;
     right: 10%;
-    top: 35%;
+    top: 30%;
   }
 }
 
@@ -106,7 +110,13 @@ button,
   position: relative;
   margin-right: 5%;
   text-decoration: none;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   color: white;
+}
+
+.part1 .header nav.active {
+  margin-right: 2%;
 }
 
 @media (max-width: 1370px) {
@@ -147,6 +157,7 @@ button,
 
 @media (max-width: 1010px) {
   .part1 .header nav {
+    margin-right: -100%;
     background: black;
     width: 200px;
     height: 550px;
@@ -235,11 +246,31 @@ button,
   color: black;
 }
 
+@media (max-width: 1010px) {
+  .part1 .header nav ul li:nth-child(10) a:hover,
+  .part1 .header nav ul li:nth-child(11) a:hover {
+    background: none;
+    color: #89E872;
+    border: none;
+    padding: 5px;
+  }
+}
+
 .part1 .header nav ul li:nth-child(10) a:active,
 .part1 .header nav ul li:nth-child(11) a:active {
   color: black;
   background: white;
   border: 1px solid white;
+}
+
+@media (max-width: 1010px) {
+  .part1 .header nav ul li:nth-child(10) a:active,
+  .part1 .header nav ul li:nth-child(11) a:active {
+    background: none;
+    color: #89E872;
+    border: none;
+    padding: 5px;
+  }
 }
 
 .part1 .header nav ul li:nth-child(10) {
@@ -436,7 +467,8 @@ button,
   background: black;
 }
 
-.part1 .header nav ul li:hover > ul {
+.part1 .header nav ul li:hover > ul,
+.part1 .header nav ul li .insideList.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,12 +483,14 @@ button,
 }
 
 @media (max-width: 1010px) {
-  .part1 .header nav ul li:hover > ul {
+  .part1 .header nav ul li:hover > ul,
+  .part1 .header nav ul li .insideList.active {
     display: block;
   }
 }
 
-.part1 .header nav ul li:hover > ul > li {
+.part1 .header nav ul li:hover > ul > li,
+.part1 .header nav ul li .insideList.active > li {
   -webkit-animation: dropMenu;
           animation: dropMenu;
   -webkit-animation-timing-function: ease-in-out;
@@ -468,13 +502,15 @@ button,
 }
 
 @media (max-width: 1050px) {
-  .part1 .header nav ul li:hover > ul > li {
+  .part1 .header nav ul li:hover > ul > li,
+  .part1 .header nav ul li .insideList.active > li {
     padding: 15px;
   }
 }
 
 @media (max-width: 1010px) {
-  .part1 .header nav ul li:hover > ul > li {
+  .part1 .header nav ul li:hover > ul > li,
+  .part1 .header nav ul li .insideList.active > li {
     display: block;
   }
 }
