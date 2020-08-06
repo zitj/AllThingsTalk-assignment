@@ -109,8 +109,8 @@ for(let i = 0; i < playButton.length; i++){
 
 for(let i = 0; i < listElements.length; i++){
     listElements[i].addEventListener('click', ()=>{
-        // insideListsClassRemoval();
-        insideLists[i].classList.toggle('active');
+        insideListsClassRemoval();
+        insideLists[i].classList.add('active');
     });
 }
 
