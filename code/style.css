@@ -656,7 +656,7 @@ button,
 .part1 .hero {
   text-align: center;
   height: 100vh;
-  background: url(../img/hero1-min.png);
+  background: url(../img/hero2-min.png);
   background-position: left center;
   background-repeat: no-repeat;
   width: 100%;
@@ -671,7 +671,7 @@ button,
 @media (max-width: 414px) {
   .part1 .hero {
     width: 414px;
-    background-position: -300px -80px;
+    background-position: -1080px -240px;
   }
 }
 
