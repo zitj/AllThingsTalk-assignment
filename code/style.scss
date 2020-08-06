@@ -15,11 +15,22 @@ body{
 .wrapper{
     width: 100%;
     margin: 0 auto;
+    @include media("<=1024px"){
+        width: 1024px;
+    }
+ 
+    @include media("<=414px"){
+        width: 414px;
+    }
 }
 .container{
     width: 70%;
     margin: 0 auto;
+    @include media("<=414px"){
+        width: 414px;
+    }
 }
+
 h1, h2, h3, .container .buttonSection button, .guidelinesContainer a, .guidelinesContainer p{
     font-family: 'Paytone One', sans-serif;
 }
@@ -44,6 +55,15 @@ button,
     display:none;
 }
 .part1{
+    .logo{
+        @include media("<=1024px"){
+            margin-left: 10%;  
+        }
+        @include media("<=500px"){
+            margin-left: 0%;  
+        }
+      
+    }
     .hamburger{
         padding: 10px;
         border:1px solid white;
@@ -67,12 +87,16 @@ button,
         span.active{
             transform:translateY(10px) rotate(-45deg)
         }
-        @include media("<=1010px"){
+        @include media("<=1024px"){
         display: block;
         position: absolute;
-        right:10%;
-        top:30%;  
+        top:30%;
+        right: 25%;  
     }
+        @include media("<=414px"){
+        right: 10%;
+    }
+    
 }
 
     .header{
@@ -85,6 +109,10 @@ button,
         width: 100%;
         position: fixed;
         z-index: 20;
+        @include media("<=414px"){
+            width: 414px;
+        }
+        
     nav{
         position: relative;
         margin-right: 5%;
@@ -92,7 +120,7 @@ button,
         transition: .3s ease-in-out;
         color: white;
         &.active {
-            margin-right: 2%;
+            display: block;
           }
         @include media("<=1370px"){
             margin-right: 10%;
@@ -112,23 +140,26 @@ button,
           @include media("<=1050px"){
             margin-right: 4%;
           }
-          @include media("<=1010px"){
-            margin-right: -100%;
+          @include media("<=1024px"){
+            display: none;
             background: black;
-            width: 200px;
+            width: 400px;
             height: 550px;
             position: absolute;
             top:100%;
             right: 0%;
         }
+          @include media("<=414px"){
+            width: 250px;
+        }
        
         
         ul{ 
         list-style: none;
-        
         li{
         display: inline-block;
         position: relative;
+        
         padding: 30px 10px;
         @include media("<=1370px"){
             padding: 30px 20px;
@@ -139,7 +170,7 @@ button,
         @include media("<=1050px"){
             padding: 30px 10px;
           }
-          @include media("<=1010px"){
+          @include media("<=1024px"){
             display: block;  
           }
         &:nth-child(5),
@@ -156,7 +187,7 @@ button,
            @include media("<=1370px"){
               display: inline-block;  
             }
-           @include media("<=1010px"){
+           @include media("<=1024px"){
               display: block;  
             }
         }    
@@ -166,14 +197,17 @@ button,
             background: none;
             border: 1px solid white;
             transition: .17s ease-in-out;
-            @include media("<=1010px"){
+            @include media("<=1024px"){
                 border:none;
-              } 
+              }
+            @include media("<=414px"){
+                margin-left: -12px;
+            }   
             &:hover{
                 background: $new-green;
                 border: 1px solid $new-green;
                 color: black;
-                    @include media("<=1010px"){
+                    @include media("<=1024px"){
                             background:none;
                             color: $new-green;
                             border: none;
@@ -185,7 +219,7 @@ button,
                 background: white;
                 border: 1px solid white;
                 
-                @include media("<=1010px"){
+                @include media("<=1024px"){
                     background:none;
                     color: $new-green;
                     border: none;
@@ -214,7 +248,7 @@ button,
             @include media("<=1240px"){
                 margin-left: 2em;
               }
-              @include media("<=1010px"){
+              @include media("<=1024px"){
                 margin-left: 0;
               } 
         }
@@ -222,7 +256,7 @@ button,
         &:nth-child(10) a{
             background: white;
             color: black;
-            @include media("<=1010px"){
+            @include media("<=1024px"){
                 border:none;
                 background: black;
                 color:white;  
@@ -233,6 +267,7 @@ button,
             color: white;
             padding: 80px 20px;
             transition: 0.2s ease;
+            
             @include media("<=1676px"){
                 padding: 80px 16px;
             }
@@ -254,7 +289,7 @@ button,
             @include media("<=1410px"){
                 padding: 80px 2px;
             }
-            @include media("<=1010px"){
+            @include media("<=1024px"){
                 display: block;
                 padding:0;
                 z-index: 2;
@@ -270,7 +305,7 @@ button,
                 margin-left: 4px;
                 padding-left: 4px;
                 
-                @include media("<=1010px"){
+                @include media("<=1024px"){
                     position: absolute;
                     left:-5%;
                     top:40%;
@@ -295,16 +330,19 @@ button,
                 position: absolute;
                 top:100%;
                 transition: 0.3s ease-in-out;
-                @include media("<=1010px"){
+                @include media("<=1024px"){
                     top:5%;
                     right:100%;
-                    z-index: 30;
+                }
+                @include media("<=414px"){
+                    top:5%;
+                    right:105%;
                 }
                li{
                  list-style: none;
                  padding: 20px 20px;
                  background: black;
-                 @include media("<=1010px"){
+                 @include media("<=1024px"){
                     padding:0px;
                 }
                  &:hover{
@@ -324,8 +362,11 @@ button,
                 flex-direction: column;
                 width: 100%;
                 perspective: 1000px;
-                @include media("<=1010px"){
+                @include media("<=1024px"){
                     display: block;
+                }
+                @include media("<=414px"){
+                    width: 80%;
                 }
             }
             &:hover > ul > li,
@@ -337,8 +378,11 @@ button,
                 @include media("<=1050px"){
                     padding: 15px;
                 }
-                @include media("<=1010px"){
+                @include media("<=1024px"){
                     display: block;
+                }
+                @include media("<=414px"){
+                    padding: 10px;
                 }
             }
             &:hover > ul > li:nth-child(1){
@@ -383,33 +427,35 @@ button,
     text-align: center;
     height: 100vh;
     background: url(../img/hero1.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 100%;
+    @include media("<=950px"){
+        width: 110%;
+    }
+    @include media("<=414px"){
+        width: 414px;
+    }
     .container{
       
-        h1{
-            font-size: 3.3em;
-            letter-spacing: 2px;
+        .headings{
+            
             margin-top: 0%;
             position: absolute;
             top:50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            @include media("<=1670px"){
-                font-size: 3em;
+            h1{ 
+            @include media("<=600px"){
+                font-size: 1.8em;
             }
-            @include media("<=1502px"){
-                font-size: 2.7em;
+            @include media("<=550px"){
+                font-size: 1.6em;
             }
-            @include media("<=1370px"){
-                font-size: 2.5em;
+            @include media("<=414px"){
+                font-size: 1.4em;
             }
-            @include media("<=1280px"){
-                font-size: 2.3em;
-            }
-            @include media("<=1190px"){
-                font-size: 2.1em;
-                letter-spacing: 1px;
-            }
-          
+             }
             span{
                 background: black;
                 padding: 0px 15px;
@@ -417,54 +463,23 @@ button,
             }
         }
         h3{
-            font-size: 1.4em;
-            background: $new-green;
-            padding: 2px 10px;
+            font-size: 1em;
             margin: 5px 0;
-            position: absolute;
-            top:66%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            @include media("<=1670px"){
-                font-size: 1.3em;
-                top:63%;
+            background: $new-green;
+            display: inline-block;
+            @include media("<=738px"){
+                font-size: .9em;
             }
-            @include media("<=1280px"){
-                top:60%;
+            @include media("<=670px"){
+                font-size: .8em;
             }
-            @include media("<=1502px"){
-                font-size: 1.1em;
+            @include media("<=600px"){
+                font-size: .7em;
             }
-            @include media("<=1190px"){
-                font-size: 1em;
-              }
-              &:nth-of-type(2){
-                  top:70%;
-                  padding: 2px 17px;
-                  @include media("<=1670px"){
-                      top:66.5%;
-                    }
-                    @include media("<=1280px"){
-                        top:63%;
-                    }
-                    // @include media("<=1180px"){
-                    //     top:66%;
-                    // }
+            @include media("<=550px"){
+                font-size: .6em;
             }
-            &:nth-of-type(3){
-                top:74%;
-                @include media("<=1670px"){
-                    top:70%;
-                }
-                @include media("<=1280px"){
-                    top:66%;
-                }
-                // @include media("<=1180px"){
-                //     top:69%;
-                // }
-            }
-   
-    }
+        }
    .buttonSection{
        position: absolute;
        bottom: 0%;
@@ -472,6 +487,17 @@ button,
        width: 70%;
        display: flex;
        justify-content: space-between;
+       @include media("<=550px"){
+        bottom: 15%;
+        left: 45.5%;
+        width:30%;
+        }   
+       @include media("<=414px"){
+        bottom: 15%;
+        left: 25%;
+        width:50%;
+        }   
+
        .border{
            height: 60px;
            width: 2px;
@@ -481,6 +507,9 @@ button,
         }
         .border.active{
             display: block;
+            @include media("<=550px"){
+                display: none;
+            }
         }
        button{
            font-size: 1.4em;
@@ -492,8 +521,27 @@ button,
            border: none;
            outline: none;
            transition: .15s ease-in-out;
+           @include media("<=936px"){
+            font-size: 1.2em;
+          }
+          @include media("<=550px"){
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            
+          }
+          &:nth-of-type(2),
+          &:nth-of-type(3){
+            @include media("<=550px"){
+                display: none;
+            }
+          }
            &:hover{
                font-size: 1.48em;
+               @include media("<=936px"){
+                font-size: 1.28em;
+              }
            }
            &:active{
                background: white;
@@ -575,6 +623,10 @@ button,
     h2{
         text-align: center;
         display: none;
+        @include media("<=414px"){
+            font-size: 1.2em;
+            margin-left: -9.5%;
+        }
         span{
             display: none;
             @include media("<=1200px"){
@@ -583,11 +635,23 @@ button,
                 font-size: 17em;
                 left:17%;
               }
+              @include media("<=936px"){
+                font-size: 15em;
+              } 
+              @include media("<=500px"){
+                font-size: 10em;
+            } 
+              @include media("<=414px"){
+                font-size: 8em;
+                margin-left: -12.8%;
+                margin-top: 3%;
+            } 
         }
         @include media("<=1200px"){
             margin-top: 4em;
             display: block;
           }
+       
     }
     h2.active{
         display: block;
@@ -642,6 +706,15 @@ button,
         @include media("<=1200px"){
             margin-top:20px;
           }
+          @include media("<=500px"){
+            width: 70%;
+            margin-left: 5%;
+        }  
+          @include media("<=414px"){
+            width: 414px;
+            margin-left: -10%;
+            margin-top: -27%;
+        }  
         
         ol{
             list-style: none;
@@ -672,10 +745,22 @@ button,
                 margin-left: 2em;
                 font-size: 1.4em;
             }
-            
-            
+            @include media("<=1024px"){
+                margin-left: 3em;
+                font-size: 1.1em;
+            }
+            @include media("<=936px"){
+                font-size: 1em;
+              }
+          
             &:nth-child(3){
                 padding-top: 5px;
+                @include media("<=730px"){
+                    padding-top: 8px;
+                  }
+                @include media("<=414px"){
+                    padding-top: 5px;
+                  }
             }
             &::before{
                 content: counter(my-awesome-counter) ". ";
@@ -697,6 +782,12 @@ button,
                 @include media("<=1200px"){
                     left:-5%;
                 }
+                @include media("<=1024px"){
+                    left:-7%;
+                }
+                @include media("<=638px"){
+                    left:-10%;
+                }
             }  
         }
       
@@ -713,6 +804,27 @@ button,
                 margin-left: 13em;
                 margin-top: 3em;
             }
+            @include media("<=1024px"){
+                transform: scale(.7);
+                margin-left: 8em;
+            }
+            @include media("<=936px"){
+                transform: scale(.6);
+                margin-left: 3em;
+                margin-top: 2.5em;
+            }
+            @include media("<=730px"){
+                transform: scale(.5);
+                margin-left: 0em;
+            }
+            @include media("<=500px"){
+                margin-left: 2em;
+            }
+            @include media("<=414px"){
+                margin-left: -7em;
+                margin-top: -5em;
+                transform: scale(.4);
+            }
         
     }
 }
@@ -724,11 +836,24 @@ button,
     height: 500px;
     text-align: center;
     padding-top:7em ;
+    @include media("<=414px"){
+        padding-top: 5em;
+    }
     h1,p{
         letter-spacing: 2px;
     }
     h1{
         font-size: 2.3em;
+        @include media("<=414px"){
+            font-size: 2em;
+            margin-left: -2%;
+        }
+    }
+    p{
+        @include media("<=414px"){
+            font-size: .6em;
+            margin-left: -2%;
+        } 
     }
    .container{
        .buttonSection{
@@ -736,6 +861,29 @@ button,
            display: flex;
            justify-content: space-between;
            margin-top: 5em;
+           @include media("<=500px"){
+            width: 80%;
+            margin-left: 8%;
+           }
+        @include media("<=414px"){
+            width: 300px;
+            margin-left: 57px;
+            font-size: .55em;
+            background: none;
+            display: block;
+        }
+        &:nth-of-type(1){
+            @include media("<=414px"){
+                display: none;
+            }
+        }
+        &:nth-of-type(2){
+            display: none;
+            @include media("<=414px"){
+                display: block;
+            }
+        }
+      
            button{
                width: 100%;
                height: 80px;
@@ -743,6 +891,10 @@ button,
                background: $new-green;
                font-size: 1.2em;
                cursor: pointer;
+               @include media("<=414px"){
+                margin-bottom: 2px;
+                
+            }
                &:hover{
                    
                    background: #aeff9a;
@@ -758,20 +910,39 @@ button,
                height: 50px;
                margin-top: 16px;
                background: rgb(107, 107, 107);
+               @include media("<=414px"){
+                display: none;
+            }
            }
+         
        }
    }
 }
 .part4{
-    background: black;
     padding-bottom: 5em;
+    background: black;
+       
+    
     .container{ 
+    background: black;
     display: flex;
     justify-content:space-evenly;
     flex-direction: row;
+    @include media("<=500px"){
+        flex-direction: column;
+        text-align: center;
+    }
+   
     .column{
     width: 30%;
     margin-right: 5%;
+    @include media("<=500px"){
+        width: 100%;
+    }
+    @include media("<=414px"){
+       width: 400px;
+       margin-left: 7px;
+    }
         h3{
             color: $new-green;
             letter-spacing: 1px;
@@ -809,11 +980,29 @@ button,
 }
 .footer{
     background: black;
-    
+    @include media("<=414px"){
+        padding-bottom: 4em;
+    }
     .container{ 
+    background: black;
     display: flex;
     padding: 30px;
     justify-content: space-between;
+    @include media("<=730px"){
+        flex-direction: column;
+        text-align: center;
+        font-size: 1em;
+        padding: 10px;
+    }
+    @include media("<=414px"){
+        width: 400px;
+        margin-left: 7px;
+    }
+    .logo{
+        @include media("<=414px"){
+           margin-left: -8%;
+        }  
+    }
     a{
         text-decoration: none;
         color: white;
@@ -841,6 +1030,16 @@ button,
         @include media("<=1100px"){
             margin-right: 2em;
           }
+        @include media("<=1100px"){
+            margin-right: 1em;
+          }
+        @include media("<=950px"){
+            margin-right: .8em;
+            font-size: .8em;
+          }
+        @include media("<=414px"){
+            display: block;
+        }
         &:hover{
             color: $new-green;
         }
