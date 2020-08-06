@@ -36,6 +36,16 @@ body {
   }
 }
 
+a,
+li,
+.hamburger,
+svg,
+button,
+.logo,
+.blackBackground {
+  -webkit-tap-highlight-color: transparent;
+}
+
 h1, h2, h3, .container .buttonSection button, .guidelinesContainer a, .guidelinesContainer p {
   font-family: 'Paytone One', sans-serif;
 }
@@ -44,7 +54,8 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-a {
+a,
+button {
   outline: none;
 }
 
@@ -660,6 +671,7 @@ button,
 @media (max-width: 414px) {
   .part1 .hero {
     width: 414px;
+    background-position: -300px -80px;
   }
 }
 
@@ -1277,14 +1289,14 @@ button,
 @media (max-width: 414px) {
   .part3 h1 {
     font-size: 2em;
-    margin-left: -18%;
+    margin-left: -14%;
   }
 }
 
 @media (max-width: 414px) {
   .part3 p {
     font-size: .6em;
-    margin-left: -18%;
+    margin-left: -14%;
   }
 }
 
@@ -1309,7 +1321,7 @@ button,
 @media (max-width: 414px) {
   .part3 .container .buttonSection {
     width: 300px;
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: .55em;
     background: none;
     display: block;
@@ -1412,7 +1424,7 @@ button,
 @media (max-width: 414px) {
   .part4 .container .column {
     width: 400px;
-    margin-left: -8%;
+    margin-left: -6%;
   }
 }
 
@@ -1494,13 +1506,13 @@ button,
 @media (max-width: 414px) {
   .footer .container {
     width: 400px;
-    margin-left: -40px;
+    margin-left: -28px;
   }
 }
 
 @media (max-width: 414px) {
   .footer .container .logo {
-    margin-left: -10%;
+    margin-left: -8%;
   }
 }
 
@@ -1629,9 +1641,9 @@ button,
 
 @media (max-width: 414px) {
   .blackBackground .video img {
-    width: 350px;
-    height: 250px;
-    left: 35%;
+    width: 250px;
+    height: 150px;
+    left: 32%;
   }
 }
 
@@ -1673,8 +1685,8 @@ button,
 
 @media (max-width: 414px) {
   .blackBackground .closeButton {
-    right: 35%;
-    top: 35%;
+    right: 45%;
+    top: 38%;
   }
 }
 

@@ -32,14 +32,23 @@ body{
     }
  
 }
-
+a,
+li,
+.hamburger,
+svg,
+button,
+.logo,
+.blackBackground {
+    -webkit-tap-highlight-color: transparent;
+}
 h1, h2, h3, .container .buttonSection button, .guidelinesContainer a, .guidelinesContainer p{
     font-family: 'Paytone One', sans-serif;
 }
 h1, h2 , h3{
     text-transform: uppercase;
 }
-a{
+a,
+button{
     outline:none;
 }
 .logo,
@@ -433,10 +442,12 @@ button,
     background-repeat: no-repeat;
     width: 100%;
     @include media("<=950px"){
+        
         width: 100%;
     }
     @include media("<=414px"){
         width: 414px;
+        background-position: -300px -80px;
     }
 
     .container{
@@ -851,13 +862,13 @@ button,
         font-size: 2.3em;
         @include media("<=414px"){
             font-size: 2em;
-            margin-left: -18%;
+            margin-left: -14%;
         }
     }
     p{
         @include media("<=414px"){
             font-size: .6em;
-            margin-left: -18%;
+            margin-left: -14%;
         } 
     }
    .container{
@@ -872,7 +883,7 @@ button,
            }
         @include media("<=414px"){
             width: 300px;
-            margin-left:20px;
+            margin-left:30px;
             font-size: .55em;
             background: none;
             display: block;
@@ -946,7 +957,7 @@ button,
     }
     @include media("<=414px"){
        width: 400px;
-       margin-left: -8%;
+       margin-left: -6%;
     }
         h3{
             color: $new-green;
@@ -1001,11 +1012,11 @@ button,
     }
     @include media("<=414px"){
         width: 400px;
-        margin-left: -40px;
+        margin-left: -28px;
     }
     .logo{
         @include media("<=414px"){
-           margin-left: -10%;
+           margin-left: -8%;
         }  
     }
     a{
@@ -1086,9 +1097,9 @@ button,
         animation: videoIntro .3s ease-in-out;
         z-index: 2;
         @include media("<=414px"){
-            width: 350px;
-            height: 250px;
-            left: 35%;
+            width: 250px;
+            height: 150px;
+            left: 32%;
         }
         @keyframes videoIntro {
             0%{
@@ -1112,8 +1123,8 @@ button,
         animation: closeButtonIntro .3s ease-in-out;
         z-index: 2;
         @include media("<=414px"){
-           right: 35%;
-           top:35%;
+           right: 45%;
+           top:38%;
         }
         @keyframes closeButtonIntro {
             0%{
