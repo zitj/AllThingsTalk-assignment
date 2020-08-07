@@ -82,10 +82,6 @@ button,
     animation: introAnimation 1.3s ease-out;
     @keyframes introAnimation {
         0%{
-            margin-left: -100%;
-        }
-   
-        1%{
             margin-left: 0%;
         }
         25%{
@@ -428,8 +424,10 @@ button,
                  list-style: none;
                  padding: 20px 20px;
                  background: black;
+                 text-align: center;
                  @include media("<=1024px"){
                     padding:0px;
+                    text-align: left;
                 }
                  &:hover{
                      color: $new-green;
@@ -471,8 +469,12 @@ button,
                 @include media("<=414px"){
                     padding: 10px;
                 }
+            } 
+            &:hover > ul > li:last-child{
+                border-radius: 0px 0px 6px 6px;
             }
             &:hover > ul > li:nth-child(1){
+                border-radius: 6px 6px 0px 0px;
                 animation-duration: 300ms;
                 }
             
