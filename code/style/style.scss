@@ -18,6 +18,9 @@ body{
     @include media("<=1024px"){
         width: 1024px;
     }
+    @include media("<=800px"){
+        width: 820px;
+    }
  
     @include media("<=414px"){
         width: 414px;
@@ -27,6 +30,10 @@ body{
 .container{
     width: 70%;
     margin: 0 auto;
+    @include media("<=1024px"){
+        width: 600px;
+    }
+   
     @include media("<=414px"){
         width: 414px;
     }
@@ -65,15 +72,78 @@ button,
 .hamburger{
     display:none;
 }
+.introAnimation{
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    margin-left: -100%;
+    animation: introAnimation 1.3s ease-out;
+    @keyframes introAnimation {
+        0%{
+            margin-left: -100%;
+        }
+   
+        1%{
+            margin-left: 0%;
+        }
+        25%{
+            margin-left: 0%;
+        }
+        50%{
+            margin-left: 0%;
+        }
+        70%{
+            margin-left: 0%;
+        }
+        90%{
+            margin-left: 0%;
+        }
+        100%{
+            margin-left: -100%;
+        }
+    }
+    .logo{
+        position: absolute;
+        left: 45%;
+        top: 45%;
+        transform: translate(-50%,-50%);
+        transform: scale(1);
+        animation: logoIntro 1s ease-in;
+        @include media("<=1024px"){
+            left: 26%;
+        }
+        @keyframes logoIntro {
+            0%{
+                transform: scale(0) ;
+            }
+            50%{
+                transform: scale(2);
+            }
+            100%{
+                transform: scale(1) rotate(360deg);
+            }
+        }
+    }
+}
 .part1{
     .logo{
         @include media("<=1024px"){
-            margin-left: 10%;  
+            margin-left: 13%;  
+        }
+        @include media("<=800px"){
+            margin-left: 10%; 
+            
         }
         @include media("<=500px"){
             margin-left: 0%;  
         }
-      
+      img{
+        @include media("<=414px"){
+            transform: scale(.8 ); 
+        }
+      }
     }
     .hamburger{
         padding: 10px;
@@ -105,6 +175,7 @@ button,
         right: 25%;  
     }
         @include media("<=414px"){
+        top:27%;
         right: 25%;
     }
     
@@ -131,7 +202,8 @@ button,
         transition: .3s ease-in-out;
         color: white;
         &.active {
-            display: block;
+            margin-right: 0%;
+            opacity: 1;
           }
         @include media("<=1370px"){
             margin-right: 10%;
@@ -152,7 +224,9 @@ button,
             margin-right: 4%;
           }
           @include media("<=1024px"){
-            display: none;
+            display: block;
+            margin-right: -100%;
+            opacity: 0;
             background: black;
             width: 400px;
             height: 550px;
@@ -337,6 +411,7 @@ button,
             }
             ul{
                 display: none;
+               
                 padding: 5px;
                 position: absolute;
                 top:100%;
@@ -373,6 +448,7 @@ button,
                 flex-direction: column;
                 width: 100%;
                 perspective: 1000px;
+                
                 @include media("<=1024px"){
                     display: block;
                 }
@@ -437,13 +513,20 @@ button,
 .hero{
     text-align: center;
     height: 100vh;
-    background: url(../img/hero2-min.png);
+    background: url(../../img/hero2-min-min.png);
     background-position: left center;
     background-repeat: no-repeat;
     width: 100%;
+    @include media("<=1024px"){
+        width: 1024px;
+        background-position: -150px;
+    }
     @include media("<=950px"){
-        
         width: 100%;
+    }
+    @include media("<=800px"){
+        width: 900px;
+        background-position: -250px;
     }
     @include media("<=414px"){
         width: 414px;
@@ -458,6 +541,12 @@ button,
             top:50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            @include media("<=800px"){
+                margin-left: 4%;
+            }
+            @include media("<=414px"){
+                margin-left: 0%;
+            }
             h1{ 
             @include media("<=600px"){
                 font-size: 1.8em;
@@ -503,6 +592,14 @@ button,
        width: 70%;
        display: flex;
        justify-content: space-between;
+       @include media("<=1024px"){
+        left: 11%;
+        bottom: 10.5%;
+        }
+        @include media("<=800px"){
+        left: 17%;
+        bottom: 0%;
+        }   
        @include media("<=550px"){
         bottom: 15%;
         left: 45.5%;
@@ -639,6 +736,8 @@ button,
     h2{
         text-align: center;
         display: none;
+        
+        
         @include media("<=414px"){
             font-size: 1.2em;
             margin-left: -15%;
@@ -651,6 +750,10 @@ button,
                 font-size: 17em;
                 left:17%;
               }
+              @include media("<=1024px"){
+                font-size: 13em;
+                left: 13%;
+            }
               @include media("<=936px"){
                 font-size: 15em;
               } 
@@ -722,6 +825,12 @@ button,
         @include media("<=1200px"){
             margin-top:20px;
           }
+          @include media("<=1024px"){
+            margin-left: -21%;
+        }
+          @include media("<=800px"){
+            margin-left: -12%;
+        }
           @include media("<=500px"){
             width: 70%;
             margin-left: 5%;
@@ -742,6 +851,7 @@ button,
             position: relative;
             margin-left: 60px;
             padding-left: 10px;
+            margin-bottom: 30px;           
             @include media("<=1600px"){
                 margin-left: 10px;
             }
@@ -764,6 +874,9 @@ button,
             @include media("<=1024px"){
                 margin-left: 3em;
                 font-size: 1.1em;
+            }
+            @include media("<=1024px"){
+                margin-bottom: 25px;
             }
             @include media("<=936px"){
                 font-size: 1em;
@@ -806,6 +919,7 @@ button,
                 }
             }  
         }
+       
       
     }    
   
@@ -822,7 +936,7 @@ button,
             }
             @include media("<=1024px"){
                 transform: scale(.7);
-                margin-left: 8em;
+                margin-left: 0em;
             }
             @include media("<=936px"){
                 transform: scale(.6);
@@ -860,12 +974,24 @@ button,
     }
     h1{
         font-size: 2.3em;
+        @include media("<=1024px"){
+            margin-left: -10%;
+        }
+        @include media("<=1024px"){
+            margin-left: -5%;
+        }
         @include media("<=414px"){
             font-size: 2em;
             margin-left: -14%;
         }
     }
     p{
+        @include media("<=1024px"){
+            margin-left: -10%;
+        }
+        @include media("<=1024px"){
+            margin-left: -5%;
+        }
         @include media("<=414px"){
             font-size: .6em;
             margin-left: -14%;
@@ -877,6 +1003,12 @@ button,
            display: flex;
            justify-content: space-between;
            margin-top: 5em;
+           @include media("<=1024px"){
+            margin-left: -10%;
+           }
+           @include media("<=800px"){
+            margin-left: -5%;
+           }
            @include media("<=500px"){
             width: 80%;
             margin-left: 8%;
@@ -996,6 +1128,9 @@ button,
 }
 .footer{
     background: black;
+    @include media("<=1024px"){
+        padding: 4em 0;
+    }
     @include media("<=414px"){
         padding-bottom: 4em;
     }
@@ -1004,6 +1139,16 @@ button,
     display: flex;
     padding: 30px;
     justify-content: space-between;
+    @include media("<=1024px"){
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.1em;
+        padding: 10px;
+    }
+    @include media("<=800px"){
+        font-size: 1.3em;
+    }
+   
     @include media("<=730px"){
         flex-direction: column;
         text-align: center;
@@ -1015,6 +1160,10 @@ button,
         margin-left: -28px;
     }
     .logo{
+        @include media("<=1024px"){
+           margin-left: -8%;
+           margin-bottom: 8%;
+        }  
         @include media("<=414px"){
            margin-left: -8%;
         }  
@@ -1096,6 +1245,11 @@ button,
         display: none;
         animation: videoIntro .3s ease-in-out;
         z-index: 2;
+        @include media("<=1024px"){
+            width: 550px;
+            height: 350px;
+            left: 45%;
+        }
         @include media("<=414px"){
             width: 250px;
             height: 150px;
@@ -1122,6 +1276,13 @@ button,
         display: none;
         animation: closeButtonIntro .3s ease-in-out;
         z-index: 2;
+        @include media("<=1024px"){
+           right: 28%;
+           top:32%;
+        }
+        @include media("<=800px"){
+           right: 24%;
+        }
         @include media("<=414px"){
            right: 45%;
            top:38%;

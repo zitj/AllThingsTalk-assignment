@@ -23,6 +23,7 @@ const nav = part1.querySelector('nav');
 const insideLists = document.querySelectorAll('.insideList');
 const listElements = document.querySelectorAll('.listElement');
 
+const introAnimation = document.querySelector('.introAnimation');
 
 const numberButtonClassRemoval = () => {
     for(let i = 0; i < numberButton.length; i++){
